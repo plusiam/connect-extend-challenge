@@ -389,6 +389,20 @@
             }
         }
     </style>
+<style id="mobile-fix-20261110">
+/* 폰 화면 보정(2026-11-10): 좁은 화면에서 제목·학생 정보 줄·학습지 틀이 넘치거나 쪼개지지 않게 */
+@media screen and (max-width: 900px) {
+  .worksheet-container { width: auto; max-width: 100%; height: auto; padding: 12px; }
+  .header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .title { font-size: 22px; word-break: keep-all; }
+  .student-info { flex-wrap: wrap; gap: 8px 16px; }
+  .info-item label { white-space: nowrap; }
+  .sections { flex-direction: column; }
+  .step { min-height: 240px; }
+  .step:hover { transform: none; }
+  .writing-area { min-height: 140px; }
+}
+</style>
 </head>
 <body>
 
